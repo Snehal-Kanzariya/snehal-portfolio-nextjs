@@ -9,7 +9,7 @@
         @apply z-10 text-white w-full h-full min-h-screen bg-cover bg-center relative
     }
 
-    section {
+    body {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/section-bg.png');
     }
 
@@ -30,6 +30,10 @@
     ul.nav-list li.btn {
         @apply hover:bg-green hover:text-white hover:duration-1000 ease-in-out
     }
+    .social-icon a {
+        @apply mb-9 mr-5 inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-white bg-opacity-10 text-base text-gray hover:bg-green hover:duration-1000
+    }
+
 
     
 }

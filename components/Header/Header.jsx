@@ -1,9 +1,10 @@
 import React from "react";
+import Banner from "../Banner/Banner";
 
 const Header = () => {
   return (
-    <section>
-      <header className="flex justify-between items-center flex-wrap py-10 px-5">
+    <section className="px-5">
+      <header className="flex justify-between items-center flex-wrap py-10">
         <div className="logo cursor-pointer z-10">
           <h1>Snehal.</h1>
         </div>
@@ -30,6 +31,7 @@ const Header = () => {
           </ul>
         </nav>
       </header>
+      <Banner />
     </section>
   );
 };
