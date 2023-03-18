@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Typed from "typed.js";
-import facebook from "../../src/images/facebookIcon.png";
-import instagram from "../../src/images/instagram.png";
-import twitter from "../../src/images/twitter.png";
-import linkedin from "../../src/images/linkedin.png";
+import facebook from "../../src/assets/images/facebookIcon.png";
+import instagram from "../../src/assets/images//instagram.png";
+import twitter from "../../src/assets/images//twitter.png";
+import linkedin from "../../src/assets/images//linkedin.png";
 
 const Banner = () => {
   useEffect(() => {
@@ -22,10 +22,10 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div>
       <div className="banner-content pt-[5%]">
         <h3>Hi There!</h3>
-        <h1 className="text-5xl font-bold my-6">
+        <h1 className="text-5xl font-bold my-6 text-white">
           I am <span className="typing-element text-green"></span>
         </h1>
         <p className="mb-8 w-full max-w-md text-sm text-gray font-normal tracking-wide">
@@ -34,7 +34,10 @@ const Banner = () => {
           a type
         </p>
         <div className="flex social-icon">
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/snehal-kanzariya/"
+            target="_blank"
+          >
             <Image src={linkedin} alt="facebookIcon" width={16} height={16} />
           </a>
           <a href="#">
@@ -47,6 +50,9 @@ const Banner = () => {
             <Image src={facebook} alt="facebookIcon" width={16} height={16} />
           </a>
         </div>
+        <button className="btn-green" type="button">
+          More About Me
+        </button>
       </div>
     </div>
   );

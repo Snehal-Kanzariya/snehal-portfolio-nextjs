@@ -3,7 +3,7 @@ import Banner from "../Banner/Banner";
 
 const Header = () => {
   return (
-    <section className="px-5">
+    <section className="main-width px-5">
       <header className="flex justify-between items-center flex-wrap py-10">
         <div className="logo cursor-pointer z-10">
           <h1>Snehal.</h1>
