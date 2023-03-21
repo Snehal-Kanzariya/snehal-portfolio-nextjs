@@ -6,7 +6,7 @@
 
 @layer components {
     section {
-        @apply z-10 text-white w-full h-full min-h-screen bg-cover bg-center relative
+        @apply z-10 text-white w-full h-full min-h-screen bg-cover bg-center relative py-16
     }
 
     body {

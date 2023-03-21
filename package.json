@@ -11,10 +11,12 @@
   "dependencies": {
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "gsap": "^3.7.1",
     "js-file-download": "^0.4.12",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "scrolltrigger": "^1.0.1",
     "typed.js": "^2.0.12"
   },
   "devDependencies": {
