@@ -35,21 +35,22 @@ const Zigzag = () => {
             alt="profile picture"
             width={450}
             height="450px"
+            className="rounded-xl"
           />
         </div>
         <div className="about-content title" ref={boxesRef}>
-          <h2 className="fadeIn font-bold pb-5">About Me </h2>
-          <h3 className="fadeIn"> Developer & Designer </h3>
+          <h2 className="fadeIn font-bold">About Me </h2>
+          <h3 className="fadeIn pt-2"> Developer & Designer </h3>
           <p className="fadeIn">I am Snehal</p>
           <button className="btn-green mt-4 mr-3 fadeIn" type="button">
             Let us Talk
           </button>
           <a
             href="https://www.canva.com/design/DAFdklNl0ko/nUrSfntnHQiPGHLklO9mCg/view?utm_content=DAFdklNl0ko&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
-            downloaded
+            downloaded="true"
             target="_blank"
           >
-            <button class="fadeIn mt-4 btn-green" type="button">
+            <button className="fadeIn mt-4 btn-green" type="button">
               Download CV
             </button>
           </a>

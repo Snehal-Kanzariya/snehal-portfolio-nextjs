@@ -48,7 +48,7 @@ const Banner = () => {
   return (
     <div ref={boxesRef} className="banner-content pt-[5%]">
       <h3 className="fadeIn">Hi There!</h3>
-      <h1 className="text-5xl font-bold my-6 text-white fadeIn">
+      <h1 className="main-title text-5xl font-bold my-6 text-white fadeIn">
         I am <span className="typing-element text-green"></span>
       </h1>
       <p className="mb-8 w-full max-w-md text-sm text-gray font-normal tracking-wide fadeIn">
