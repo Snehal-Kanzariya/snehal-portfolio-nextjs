@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        lgscreen: { max: "1024px" },
+      },
       colors: {
         green: "#2ecc71",
         gray: "#EEEEEE",

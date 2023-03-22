@@ -32,7 +32,7 @@ const Skills = () => {
   }, []);
   return (
     <>
-      <section ref={boxesRef} className="skills">
+      <section id="skills" ref={boxesRef} className="skills">
         <div className="main-width">
           <div className="title fadeIn">
             <h2 className="no-pt mx-auto text-center font-bold">

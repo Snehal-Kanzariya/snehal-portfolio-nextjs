@@ -4,6 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import project1 from "../../src/assets/images/foodie.png";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 const ProjectZigzag = () => {
   const boxesRef = useRef(null);
@@ -26,7 +27,7 @@ const ProjectZigzag = () => {
   }, []);
   return (
     <>
-      <section className="projects">
+      <section className="projects" id="project">
         <div className="main-width">
           <div ref={boxesRef} className="title pb-10 fadeIn">
             <h2 className="no-pt mx-auto text-center font-bold">Projects</h2>
@@ -40,7 +41,7 @@ const ProjectZigzag = () => {
                 <Image
                   src={project1}
                   alt="project1"
-                  className="absolute inset-0 block h-full w-full object-cover fadeIn"
+                  className="absolute rounded-xl inset-0 block h-full w-full object-cover fadeIn"
                 />
               </div>
               <div className="project-info text-center fadeIn">
@@ -55,14 +56,14 @@ const ProjectZigzag = () => {
                   </p>
                 </div>
                 <div className="mt-5 fadeIn">
-                  <button type="button" className="btn-green fadeIn">
-                    <a
-                      href="https://github.com/Snehal-Kanzariya/namste-react-practice"
-                      target="_blank"
-                    >
+                  <Link
+                    href="https://github.com/Snehal-Kanzariya/namste-react-practice"
+                    target="_blank"
+                  >
+                    <button type="button" className="btn-green fadeIn">
                       View Project
-                    </a>
-                  </button>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

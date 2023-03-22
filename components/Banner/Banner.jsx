@@ -46,27 +46,47 @@ const Banner = () => {
   }, []);
 
   return (
-    <div ref={boxesRef} className="banner-content pt-[5%]">
-      <h3 className="fadeIn">Hi There!</h3>
-      <h1 className="main-title text-5xl font-bold my-6 text-white fadeIn">
+    <div
+      ref={boxesRef}
+      id="home"
+      className="banner-content pt-[22%] lg:pt-[5%]"
+    >
+      <h3 className="fadeIn text-xs lg:text-sm">Hi There!</h3>
+      <h1 className="main-title text-2xl md:text-3xl lg:text-5xl font-bold my-3 lg:my-6 text-white fadeIn">
         I am <span className="typing-element text-green"></span>
       </h1>
-      <p className="mb-8 w-full max-w-md text-sm text-gray font-normal tracking-wide fadeIn">
+      <p className="mb-4 lg:mb-8 w-full max-w-md text-sm text-gray font-normal tracking-wide fadeIn">
         Lorem Ipsum has been the standard dummy text ever since the 1500s, when
         an unknown printer took a galley of type and scrambled it to make a type
       </p>
       <div className="flex social-icon fadeIn">
         <a href="https://www.linkedin.com/in/snehal-kanzariya/" target="_blank">
-          <Image src={linkedin} alt="facebookIcon" width={16} height={16} />
+          <Image
+            src={linkedin}
+            alt="facebookIcon"
+            className="w-3 h-3 lg:w-4 lg:h-4"
+          />
         </a>
         <a href="#">
-          <Image src={instagram} alt="facebookIcon" width={16} height={16} />
+          <Image
+            src={instagram}
+            alt="facebookIcon"
+            className="w-3 h-3 lg:w-4 lg:h-4"
+          />
         </a>
         <a href="#">
-          <Image src={twitter} alt="facebookIcon" width={16} height={16} />
+          <Image
+            src={twitter}
+            alt="facebookIcon"
+            className="w-3 h-3 lg:w-4 lg:h-4"
+          />
         </a>
         <a href="#">
-          <Image src={facebook} alt="facebookIcon" width={16} height={16} />
+          <Image
+            src={facebook}
+            alt="facebookIcon"
+            className="w-3 h-3 lg:w-4 lg:h-4"
+          />
         </a>
       </div>
       <button className="btn-green fadeIn" type="button">

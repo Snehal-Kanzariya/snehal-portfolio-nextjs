@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import facebook from "../../src/assets/images/facebookIcon.png";
@@ -10,6 +10,10 @@ import linkedin from "../../src/assets/images//linkedin.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactMe = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const boxesRef = useRef(null);
 
   useEffect(() => {
@@ -34,7 +38,7 @@ const ContactMe = () => {
 
   return (
     <>
-      <section ref={boxesRef} className="Contact Me">
+      <section ref={boxesRef} id="contact" className="Contact Me">
         <div className="main-width">
           <div className="title">
             <h2 className="no-pt mx-auto text-center font-bold fadeIn">
@@ -42,20 +46,35 @@ const ContactMe = () => {
             </h2>
           </div>
           <div className="contact-inner flex flex-col items-center justify-center">
-            <div className="form lg:mt-20 mb-5 p-[50px] mt-10 rounded-lg bg-blue w-full max-w-[640px]">
+            <div className="form lg:mt-20 mb-5 p-6 lg:p-[50px] mt-10 rounded-lg bg-blue w-full max-w-[640px]">
               <div className="name fadeIn">
-                <input type="text" name="name" id="name" placeholder="name" />
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="name"
+                />
               </div>
               <div className="email fadeIn">
                 <input
                   type="email"
                   name="name"
                   id="name"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="abc@gmail.com"
                 />
               </div>
               <div className="message fadeIn">
-                <textarea rows="5" cols="40" placeholder="Message"></textarea>
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  rows="5"
+                  cols="40"
+                  placeholder="Message"
+                ></textarea>
               </div>
               <div className="social-icon fadeIn">
                 <a
@@ -99,7 +118,7 @@ const ContactMe = () => {
               </a>
             </div>
           </div>
-          <div className="copyright absolute bottom-3 fadeIn pt-5">
+          <div className="copyright lgscreen:mt-3 absolute bottom-3 fadeIn pt-5">
             <p>
               Copyright &copy;
               {currentYear}

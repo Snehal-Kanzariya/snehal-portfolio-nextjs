@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
     * {
-        /* @apply p-0 m-0 box-border */
         padding: 0;
         margin: 0;
         box-sizing: border-box;
@@ -19,7 +20,7 @@
 
 @layer components {
     section {
-        @apply z-10 text-white w-full h-full min-h-screen bg-cover bg-center relative py-16
+        @apply z-10 text-white w-full h-full min-h-screen bg-cover bg-center relative py-8 lg:py-16
     }
 
     body {
@@ -31,11 +32,11 @@
     }
 
     .btn-green {
-        @apply inline-block cursor-pointer bg-green border-green border-2 rounded-3xl py-2 px-7 leading-[1.3] text-white font-medium hover:text-green hover:bg-transparent hover:duration-1000 text-base
+        @apply inline-block cursor-pointer bg-green border-green border-2 rounded-3xl py-2 px-7 leading-[1.3] text-white font-medium hover:text-green hover:bg-transparent hover:duration-1000 text-sm lg:text-base
     }
 
     .main-width {
-        @apply my-0 mx-auto w-[1280px] max-w-[95%] py-0 px-5 
+        @apply my-0 mx-auto w-[1280px] max-w-[95%] py-0 px-4 lg:px-5 
     }
 
     .skill {
@@ -70,25 +71,89 @@
 }
 
 @layer utilities {
+     nav .menu-icon {
+        @apply w-8 h-8 lg:w-9 lg:h-7 absolute right-[5%] top-[9.5%] z-10 cursor-pointer hidden
+    }
+/* menu icon */
+    nav .menu-icon span{
+        @apply block bg-green w-full h-1 duration-[.3s]
+    }
+    nav .menu-icon span {
+        transition-property: transform,opecity;
+    }
+    nav .menu-icon span:nth-child(2) {
+        @apply my-2 mx-0
+    }
+    @media screen and (max-width: 1023px) {
+        /* menu  */
+        nav .menu-icon {
+            display: initial;
+        } 
+        .click {
+            @apply top-12
+        }
+        .click span{
+            @apply absolute mt-3
+        }
+        .click span:first-child {
+            @apply rotate-[-40deg] 
+        }
+        .click span:nth-child(2){
+            @apply opacity-0 m-0 
+        }
+        .click span:last-child {
+            @apply rotate-45 top-0
+        }
+        nav .nav-list {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 80%;
+            background: #000;
+            z-index: 2;
+            padding: 10% 9%;
+            transition: .3s right;
+            border-radius: 10px;
+            display: none;
+            padding-top: 45%;
+        }
+        nav .nav-list li{
+            @apply block
+        }
+        nav .nav-list li a{
+            @apply block text-center text-lg font-normal ml-0 mb-10 
+        }
+        nav .nav-list li.btn a{
+            @apply !mb-0 
+        }
+        /* nav .nav-list li.btn a {
+            @apply absolute inset-x-[20%] py-2 px-4 text-sm
+        } */
+        nav .nav-list.open {
+            @apply right-0 block
+        }
+    }
+
     .logo h1 {
-        @apply h-11 w-11 p-10 bg-transparent border-2 border-green text-green rounded-full inline-flex items-center justify-center text-xl cursor-pointer
+        @apply h-4 w-4 lg:h-11 lg:w-11 p-10 bg-transparent border-2 border-green text-green rounded-full inline-flex items-center justify-center text-xl cursor-pointer
     }
 
     ul.nav-list li {
-        @apply ml-14 hover:text-green hover:duration-500
+        @apply lg:ml-14 hover:text-green hover:duration-500
     }
 
     ul.nav-list li.btn {
         @apply hover:bg-green hover:text-white hover:duration-1000 ease-in-out
     }
     .social-icon a {
-        @apply mb-9 mr-5 inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-white bg-opacity-10 text-base text-gray hover:bg-green hover:duration-1000
+        @apply mb-6 lg:mb-9 mr-3 lg:mr-5 inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-white bg-opacity-10 text-base text-gray hover:bg-green hover:duration-1000
     }
     section h2 {
         @apply text-3xl lg:text-6xl
     }
     h3.project-name {
-        @apply text-base lg:text-xl text-green pt-3
+        @apply text-base lg:text-2xl text-green pt-3
     }
     .form input, .form textarea, input:-webkit-autofill {
         @apply w-full bg-black bg-opacity-30 p-3 my-2 rounded-sm
