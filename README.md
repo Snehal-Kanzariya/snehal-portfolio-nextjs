@@ -1,1 +1,1 @@
-https://snehal-porfolio-nextjs.vercel.app/
+preview: https://snehal-porfolio-nextjs.vercel.app/
